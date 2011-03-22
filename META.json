@@ -1,0 +1,53 @@
+{
+   "abstract" : "A reader for Build.PL configuration files",
+   "author" : [
+      "Leon Timmermans <fawaka@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110580",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "ExtUtils-BuildRC",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : 0,
+            "Exporter" : "5.57",
+            "File::Spec::Functions" : 0,
+            "Text::ParseWords" : 0,
+            "perl" : "5.006"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Cwd" : 0,
+            "Test::Differences" : 0,
+            "Test::More" : 0
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "mailto" : "bug-extutils-buildrc at rt.cpan.org",
+         "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=ExtUtils-BuildRC"
+      },
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/Leont/extutils-buildrc.git",
+         "web" : "http://github.com/Leont/extutils-buildrc"
+      }
+   },
+   "version" : "0.001"
+}
+
