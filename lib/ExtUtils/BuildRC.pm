@@ -1,6 +1,6 @@
 package ExtUtils::BuildRC;
 BEGIN {
-  $ExtUtils::BuildRC::VERSION = '0.001';
+  $ExtUtils::BuildRC::VERSION = '0.002';
 }
 use 5.006;
 
@@ -12,7 +12,7 @@ our @EXPORT_OK = qw/read_config parse_file/;
 
 use Carp qw/croak carp/;
 use File::Spec::Functions qw/catfile/;
-use Text::ParseWords qw/shellwords/;
+use ExtUtils::Helpers qw/split_like_shell/;
 
 sub _slurp {
 	my $filename = shift;
@@ -33,7 +33,7 @@ sub parse_file {
 	for my $line (split / \n (?! [ \t\f]) /x, $content) {
 		next LINE if $line =~ / \A \s* \z /xms;  # Skip empty lines
 		if (my ($action, $args) = $line =~ m/ \A \s* (\* | [\w.-]+ ) \s+ (.*?) \s* \z /xms) {
-			push @{ $ret{$action} }, shellwords($args);
+			push @{ $ret{$action} }, split_like_shell($args);
 		}
 		else {
 			croak "Can't parse line '$line'";
@@ -62,7 +62,7 @@ sub read_config {
 # ABSTRACT: A reader for Build.PL configuration files
 
 
-__END__
+
 =pod
 
 =head1 NAME
@@ -71,7 +71,14 @@ ExtUtils::BuildRC - A reader for Build.PL configuration files
 
 =head1 VERSION
 
-version 0.001
+version 0.002
+
+=head1 SYNOPSIS
+
+ use ExtUtils::BuildRC 'read_config';
+ 
+ my $config = read_config();
+ my @build_options = (@{ $config->{build} }, @{ $config->{'*'} });
 
 =head1 DESCRIPTION
 
@@ -87,13 +94,6 @@ Read a Build.PL compatible configuration file. It returns a hash with the action
 
 Read the first Build.PL configuration file that's available in any of the locations defined by the Build.PL Spec. The data is returned in the same format as C<parse_file> does.
 
-=head1 SYNOPSYS
-
- use ExtUtils::BuildRC 'read_config';
- 
- my $config = read_config();
- my @build_options = (@{ $config->{build} }, @{ $config->{'*'} });
-
 =head1 AUTHOR
 
 Leon Timmermans <fawaka@gmail.com>
@@ -106,4 +106,7 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
+
+
+__END__
 

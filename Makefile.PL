@@ -26,10 +26,10 @@ my %WriteMakefileArgs = (
   'PREREQ_PM' => {
     'Carp' => '0',
     'Exporter' => '5.57',
-    'File::Spec::Functions' => '0',
-    'Text::ParseWords' => '0'
+    'ExtUtils::Helpers' => '0',
+    'File::Spec::Functions' => '0'
   },
-  'VERSION' => '0.001',
+  'VERSION' => '0.002',
   'test' => {
     'TESTS' => 't/*.t'
   }

@@ -23,8 +23,8 @@
          "requires" : {
             "Carp" : 0,
             "Exporter" : "5.57",
+            "ExtUtils::Helpers" : 0,
             "File::Spec::Functions" : 0,
-            "Text::ParseWords" : 0,
             "perl" : "5.006"
          }
       },
@@ -48,6 +48,6 @@
          "web" : "http://github.com/Leont/extutils-buildrc"
       }
    },
-   "version" : "0.001"
+   "version" : "0.002"
 }
 
