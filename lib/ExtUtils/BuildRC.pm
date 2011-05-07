@@ -1,6 +1,6 @@
 package ExtUtils::BuildRC;
 BEGIN {
-  $ExtUtils::BuildRC::VERSION = '0.002';
+  $ExtUtils::BuildRC::VERSION = '0.003';
 }
 use 5.006;
 
@@ -12,7 +12,7 @@ our @EXPORT_OK = qw/read_config parse_file/;
 
 use Carp qw/croak carp/;
 use File::Spec::Functions qw/catfile/;
-use ExtUtils::Helpers qw/split_like_shell/;
+use ExtUtils::Helpers 0.006 qw/split_like_shell/;
 
 sub _slurp {
 	my $filename = shift;
@@ -59,8 +59,6 @@ sub read_config {
 
 1;
 
-# ABSTRACT: A reader for Build.PL configuration files
-
 
 
 =pod
@@ -71,7 +69,7 @@ ExtUtils::BuildRC - A reader for Build.PL configuration files
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -109,4 +107,6 @@ the same terms as the Perl 5 programming language system itself.
 
 
 __END__
+
+# ABSTRACT: A reader for Build.PL configuration files
 

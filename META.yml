@@ -7,9 +7,9 @@ build_requires:
   Test::Differences: 0
   Test::More: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.31
+  ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110580'
+generated_by: 'Dist::Zilla version 4.200006, CPAN::Meta::Converter version 2.110580'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,10 +18,10 @@ name: ExtUtils-BuildRC
 requires:
   Carp: 0
   Exporter: 5.57
-  ExtUtils::Helpers: 0
+  ExtUtils::Helpers: 0.006
   File::Spec::Functions: 0
   perl: 5.006
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=ExtUtils-BuildRC
   repository: git://github.com/Leont/extutils-buildrc.git
-version: 0.002
+version: 0.003
