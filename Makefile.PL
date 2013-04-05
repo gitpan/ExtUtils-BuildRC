@@ -2,36 +2,39 @@
 use strict;
 use warnings;
 
-BEGIN { require 5.006; }
+use 5.006;
 
 use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'A reader for Build.PL configuration files',
-  'AUTHOR' => 'Leon Timmermans <fawaka@gmail.com>',
-  'BUILD_REQUIRES' => {
-    'Cwd' => '0',
-    'Test::Differences' => '0',
-    'Test::More' => '0'
+  "ABSTRACT" => "A reader for Build.PL configuration files",
+  "AUTHOR" => "Leon Timmermans <fawaka\@gmail.com>",
+  "BUILD_REQUIRES" => {
+    "Cwd" => 0,
+    "File::Find" => 0,
+    "File::Temp" => 0,
+    "Test::More" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'ExtUtils-BuildRC',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'ExtUtils::BuildRC',
-  'PREREQ_PM' => {
-    'Carp' => '0',
-    'Exporter' => '5.57',
-    'ExtUtils::Helpers' => '0.006',
-    'File::Spec::Functions' => '0'
+  "DISTNAME" => "ExtUtils-BuildRC",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "ExtUtils::BuildRC",
+  "PREREQ_PM" => {
+    "Carp" => 0,
+    "Exporter" => "5.57",
+    "ExtUtils::Helpers" => "0.006",
+    "File::Spec::Functions" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'VERSION' => '0.003',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.004",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

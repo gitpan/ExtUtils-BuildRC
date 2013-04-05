@@ -1,6 +1,6 @@
 package ExtUtils::BuildRC;
-BEGIN {
-  $ExtUtils::BuildRC::VERSION = '0.003';
+{
+  $ExtUtils::BuildRC::VERSION = '0.004';
 }
 use 5.006;
 
@@ -10,7 +10,7 @@ use warnings FATAL => 'all';
 use Exporter 5.57 qw/import/;
 our @EXPORT_OK = qw/read_config parse_file/;
 
-use Carp qw/croak carp/;
+use Carp qw/croak/;
 use File::Spec::Functions qw/catfile/;
 use ExtUtils::Helpers 0.006 qw/split_like_shell/;
 
@@ -69,7 +69,7 @@ ExtUtils::BuildRC - A reader for Build.PL configuration files
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 
