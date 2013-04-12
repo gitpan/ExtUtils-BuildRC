@@ -1,10 +1,10 @@
 {
-   "abstract" : "A reader for Build.PL configuration files",
+   "abstract" : "*DEPRECATED* A reader for Build.PL configuration files",
    "author" : [
       "Leon Timmermans <fawaka@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300031, CPAN::Meta::Converter version 2.130880",
+   "generated_by" : "Dist::Zilla version 4.300033, CPAN::Meta::Converter version 2.130880",
    "license" : [
       "perl_5"
    ],
@@ -58,6 +58,6 @@
          "web" : "http://github.com/Leont/extutils-buildrc"
       }
    },
-   "version" : "0.004"
+   "version" : "0.005"
 }
 

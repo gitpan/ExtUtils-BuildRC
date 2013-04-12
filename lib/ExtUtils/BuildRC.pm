@@ -1,6 +1,6 @@
 package ExtUtils::BuildRC;
 {
-  $ExtUtils::BuildRC::VERSION = '0.004';
+  $ExtUtils::BuildRC::VERSION = '0.005';
 }
 use 5.006;
 
@@ -65,11 +65,11 @@ sub read_config {
 
 =head1 NAME
 
-ExtUtils::BuildRC - A reader for Build.PL configuration files
+ExtUtils::BuildRC - *DEPRECATED* A reader for Build.PL configuration files
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 SYNOPSIS
 
@@ -79,6 +79,8 @@ version 0.004
  my @build_options = (@{ $config->{build} }, @{ $config->{'*'} });
 
 =head1 DESCRIPTION
+
+B<.modulebuildrc has been deprecated at the QA Hackathon 2013, this is part of the so called "Lancaster Consensus">.
 
 This module parses Build.PL configuration files.
 
@@ -108,5 +110,5 @@ the same terms as the Perl 5 programming language system itself.
 
 __END__
 
-# ABSTRACT: A reader for Build.PL configuration files
+# ABSTRACT: *DEPRECATED* A reader for Build.PL configuration files
 

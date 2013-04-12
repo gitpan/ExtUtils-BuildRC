@@ -1,9 +1,9 @@
 
 
 This archive contains the distribution ExtUtils-BuildRC,
-version 0.004:
+version 0.005:
 
-  A reader for Build.PL configuration files
+  *DEPRECATED* A reader for Build.PL configuration files
 
 This software is copyright (c) 2010 by Leon Timmermans.
 
